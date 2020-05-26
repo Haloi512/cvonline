@@ -1,9 +1,19 @@
 import React, { Component } from "react";
-
+import Header from "../Common/Header";
 export default class About extends Component {
   render() {
     return (
       <div>
+        <div>
+          <Header
+            title="Welcome to my portpolio"
+            subtitle="this is about route"
+            buttonText="hire me now"
+            link="/contact"
+            showButton={false}
+            image="assets/img/header-bg.jpg"
+          />
+        </div>
         <section className="page-section" id="about">
           <div className="container">
             <div className="text-center">
@@ -13,29 +23,6 @@ export default class About extends Component {
               </h3>
             </div>
             <ul className="timeline">
-              <li>
-                <div className="timeline-image">
-                  <img
-                    claassName="rounded-circle img-fluid"
-                    src="assets/img/about/1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 className="subheading">Our Humble Beginnings</h4>
-                  </div>
-                  <div className="timeline-body">
-                    <p className="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sunt ut voluptatum eius sapiente, totam reiciendis
-                      temporibus qui quibusdam, recusandae sit vero unde, sed,
-                      incidunt et ea quo dolore laudantium consectetur!
-                    </p>
-                  </div>
-                </div>
-              </li>
               <li className="timeline-inverted">
                 <div className="timeline-image">
                   <img

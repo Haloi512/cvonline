@@ -7,19 +7,21 @@ export default class Header extends Component {
       <div>
         <header
           className="masthead"
-          style={{ backgroundImage: this.props.image }}
+          style={{ backgroundImage: `url(${this.props.image})` }}
         >
           <div className="container">
             <div className="masthead-subheading">{this.props.title}</div>
             <div className="masthead-heading text-uppercase">
               {this.props.subtitle}
             </div>
-            <Link
-              className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              to={this.props.link}
-            >
-              {this.props.buttonText}
-            </Link>
+            {this.props.showButton && (
+              <Link
+                className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                to={this.props.link}
+              >
+                {this.props.buttonText}
+              </Link>
+            )}
           </div>
         </header>
       </div>

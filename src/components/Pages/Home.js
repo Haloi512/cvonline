@@ -1,23 +1,23 @@
 import React, { Component } from "react";
+import Header from "../Common/Header";
+import Services from "../Common/Services";
+import Portfolio from "../Common/Portfolio";
+import Contact from "../Pages/Contact";
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <header className="masthead">
-          <div className="container">
-            <div className="masthead-subheading">Welcome To My PortPolio</div>
-            <div className="masthead-heading text-uppercase">
-              It's Nice To Meet You
-            </div>
-            <a
-              className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              href="#services"
-            >
-              Contact me
-            </a>
-          </div>
-        </header>
+        <Header
+          title="Welcome to my portpolio"
+          subtitle="this is home route"
+          buttonText="hire me now"
+          link="/contact"
+          showButton={true}
+          image="assets/img/anh dep 1.jpg"
+        />
+        <Services />
+        <Portfolio />
       </div>
     );
   }
